@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Produtos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Cadastro de Produtos</h1>
+
+  <section id="form-section">
+    <h2>Novo produto</h2>
+    <form id="form-produto">
+      <label>Código<input type="text" id="codigo" required></label>
+      <label>Descrição<input type="text" id="descricao" required></label>
+      <label>Descrição sucinta<input type="text" id="descricao_sucinta"></label>
+      <label>Fabricante<input type="text" id="fabricante"></label>
+      <label>Unidade de medida<input type="text" id="unidade_medida" placeholder="Ex.: UN, CX, KG"></label>
+      <label>Imagem do produto<input type="file" id="imagem" accept="image/*"></label>
+      <button type="submit">Cadastrar produto</button>
+    </form>
+    <p id="mensagem"></p>
+  </section>
+
+  <section id="lista-section">
+    <h2>Produtos cadastrados</h2>
+    <div id="filtros">
+      <input type="text" id="filtro-id" placeholder="Filtrar por ID">
+      <input type="text" id="filtro-descricao" placeholder="Filtrar por descrição">
+      <input type="text" id="filtro-fabricante" placeholder="Filtrar por fabricante">
+      <button id="btn-filtrar">Filtrar</button>
+      <button id="btn-limpar">Limpar filtro</button>
+    </div>
+    <table id="tabela-produtos">
+      <thead>
+        <tr>
+          <th>Imagem</th>
+          <th>ID</th>
+          <th>Código</th>
+          <th>Descrição</th>
+          <th>Descrição sucinta</th>
+          <th>Fabricante</th>
+          <th>Unid.</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela"></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
